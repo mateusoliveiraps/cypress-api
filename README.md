@@ -8,6 +8,7 @@ Este projeto contém testes automatizados para a API Restful usando o framework 
 - Node.js
 - Cypress
 
+Ao realizar o clone do projeto, executar npm i em seu terminal para instalar as dependências do projeto.
 
 ## Cenários de teste 📋
 
