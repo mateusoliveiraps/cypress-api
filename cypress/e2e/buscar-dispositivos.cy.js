@@ -27,4 +27,18 @@ describe('Buscar dispositivo especifico', () => {
             })
         })
     })
+
+    it('Buscar dispositivos por id inválido', () => {
+        cy.request({
+           method: 'GET',
+           url:'https://api.restful-api.dev/objects/669',
+           failOnStatusCode: false
+        })
+        .then((response) => {
+            expect(response.status).to.equal(404);
+            expect(response.status).to.exist;
+            expect(response.body.error).to.equal('Oject with id=669 was not found.');
+          });
+         
+     });
 })
